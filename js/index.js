@@ -39,6 +39,7 @@ const PAGE = {
       }
     ],
     currentIndex: 1,
+    correctNumber:0,
   },
 
   init:function(){
@@ -58,6 +59,8 @@ const PAGE = {
     let title = theTitle.title;
     let options = theTitle.options;
     let id = theTitle.id;
+    let total = questions.length;
+
 
     let showTitle = `
       <span class="title-number">第${id}题:</span>
@@ -68,10 +71,11 @@ const PAGE = {
 
     let showOptions = options.map((data,index)=>{
        return `
-        <li class="item" data-index="${index}">${data}</li>
+        <li class="item hover" data-index="${index}">${data}</li>
        `
     })
     $('.list').html(showOptions);
+    $('#total').html(total)
   },
 
   next:function(){
@@ -90,16 +94,18 @@ const PAGE = {
     // let index = answerItem.dataset.index;
     let index = $(this).data('index');
     let questions = PAGE.data.questions;
-    let currentIndex = PAGE.data.currentIndex;
+    let currentIndex = PAGE.data.currentIndex-1;
     if(questions[currentIndex].jue) return
     let theTitle = questions[currentIndex].correct;
     // let correct = theTitle.correct;
-
+    $(".item").removeClass("hover");
     if(index==theTitle){
       this.style.background = "#00ff00";
+      PAGE.data.correctNumber +=1
     }else{
       this.style.background = "#ff0000";
     }
+    $('#correct').html(PAGE.data.correctNumber)
     questions[currentIndex].jue = true
   },
 }

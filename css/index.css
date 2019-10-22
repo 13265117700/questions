@@ -41,13 +41,23 @@ html,body{
   background: #fdf68e;
 }
 
-.list .item:hover{
+.list .hover:hover{
   background: rgb(124, 236, 139);
   cursor: pointer;
   border-radius: 5px;
   color: #ffffff;
 }
 
+
+.info{
+  position: absolute;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  left: 0;
+  bottom: 0;
+  font-size: 18px;
+}
 .next{
   position: absolute;
   text-align: center;
