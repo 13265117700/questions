@@ -65,6 +65,7 @@ const PAGE = {
     let showTitle = `
       <span class="title-number">第${id}题:</span>
       <span class="title-name">${title}</span>
+      <span class="title-total">${id}/${total}</span>
     `
     $('.title').html(showTitle)
 
@@ -75,7 +76,6 @@ const PAGE = {
        `
     })
     $('.list').html(showOptions);
-    $('#total').html(total)
   },
 
   next:function(){
