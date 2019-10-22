@@ -1,0 +1,65 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+.page-mainer{
+  width: 600px;
+  margin: 0 auto;
+  padding:100px 0;
+  position: relative;
+}
+
+.title{
+  padding-bottom: 30px;
+}
+.title-number{
+  font-size: 28px;
+  font-weight: 400;
+  padding-right: 20px;
+}
+.title-name{
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.list li{
+  height: 50px;
+  line-height: 50px;
+  display: flex;
+  font-size: 18px;
+  list-style: none;
+  border: 1px solid #eeeded;
+  border-radius: 5px;
+  margin: 5px 0;
+  padding-left: 20px;
+  background: #fdf68e;
+}
+
+.list .item:hover{
+  background: rgb(124, 236, 139);
+  cursor: pointer;
+  border-radius: 5px;
+  color: #ffffff;
+}
+
+.next{
+  position: absolute;
+  text-align: center;
+  width: 150px;
+  height: 50px;
+  line-height: 50px;
+  right: 0;
+  bottom: 0;
+  background: #f18989;
+  color: azure;
+}
+.next:hover{
+  background: rgb(124, 236, 139);
+  cursor: pointer;
+}
